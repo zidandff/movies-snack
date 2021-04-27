@@ -1,0 +1,21 @@
+// Colors
+$primary        : #000039;
+$secondary      : #FF7E2F;
+$primary-light  : #2D2B64;
+$text-light     : #FAFAFA;
+$text-dark      : #7877A0;
+
+// Font size
+$fs-1: 1rem;    // 16px
+$fs-2: 1.25rem; // 20px
+$fs-3: 1.5rem;  // 24px
+$fs-4: 2rem;    // 32px
+$fs-5: 3rem;    // 48px
+
+// breakpoint
+$breakpoints: (
+  'x-small' : 575px,
+  'small'   : 766px,
+  'medium'  : 991px,
+  'large'   :  1199px
+) !default;

@@ -1,0 +1,48 @@
+.relative {
+    position: relative;
+}
+
+.skeleton-loading{
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 30%, rgba(227,227,227,.4) 50%, transparent 70%);
+        transform: translateX(-100%);
+        z-index: 3;
+        animation: 1s skeletonLoad linear infinite;
+        border-radius: inherit;
+    }
+
+    &.slider-movies {
+        .overlay {
+            display: none !important;
+        }
+    }
+}
+
+.carousel.skeleton-loading {
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: row;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+    .swiper-slide {
+        background-color: $primary-light;
+        margin: 0 7.5px;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+@keyframes skeletonLoad{
+    100% {
+        transform: translateX(100%);
+    }
+}

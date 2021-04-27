@@ -1,0 +1,270 @@
+nav {
+    background-color: $primary;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 18px 0;
+  position: relative;
+  justify-content: space-between ;
+  @include breakpoint('large'){
+    padding: 4px 0;
+  }
+}
+
+.hamburger {
+  display: none;
+  margin-left: -22px;
+  cursor: pointer;
+  z-index: 5;
+  align-items: center;
+
+  @include breakpoint('large'){
+    display: flex;
+  }
+
+  @include breakpoint('small'){
+    margin-left: -8px;
+  }
+}
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    position: relative;
+    @include breakpoint('large'){
+      margin: auto;
+    }
+    .nav-logo {
+      width: 200px;
+      object-fit: cover;
+      @include breakpoint('medium'){
+        width: 160px;
+      }
+      @include breakpoint('small'){
+        width: 120px;
+        margin-left: -12px;
+      }
+
+    }
+}
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    z-index: 4;
+    a {
+      font-size: $fs-1;
+      text-decoration: none;
+      color: $text-light;
+      padding: 0 8px;
+      transition: .2s;
+      &:hover {
+          color: darken($color: $text-light, $amount: 30);
+      }
+    }
+    &.collapse {
+      transform: translateY(0);
+    }
+    @include breakpoint('large'){
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100vh;
+      background-color: $primary;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      transition: 0.6s;
+      transform: translateY(-100vh);
+      margin-left: 0;
+      flex-direction: column;
+      a {
+        padding: 8px 0;
+        font-size: $fs-3;
+      }
+    }
+
+    @include breakpoint('medium'){
+      width: 60%;
+    }
+  }
+
+  
+  .search {
+    height: 45px;
+    width: 300px;
+    position: relative;
+    @include breakpoint('large'){
+      width: 45px;
+    }
+    input {
+      border-radius: 20px;
+      padding-left: 24px;
+      display: inline-block;
+      font-weight: 300;
+      border: none;
+      outline: none;
+      color: #fff;
+      padding-right: 60px;
+      height: 45px;
+      width: 350px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: $primary-light;
+      font-size: .9rem;
+      transition: width .6s, background 1s ;
+      cursor: text;
+
+      @include breakpoint('large'){
+        cursor: pointer;
+        width: 0;
+        z-index: 3; 
+        background: none;
+        &:focus {
+          cursor: text;
+          background: $primary-light;
+          width: 300px;
+          z-index: 5;
+          cursor: text;
+    
+          & + .search-icon {
+            background-color: $primary;
+            z-index: 6;
+          }
+        }
+      }
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: .9rem;
+      }
+    }
+
+    .search-icon {
+      border: 4px solid $primary-light;
+      height: 45px;
+      width: 45px;
+      background-color: $primary;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      cursor: pointer;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition:  .8s ease;
+      svg {
+          width: 34px;
+          height: 34px;
+      }
+    }
+
+}
+
+
+
+svg {
+    height: 64px;
+    position: absolute;
+    width: 64px;
+    @include breakpoint('small'){
+      height: 46px;
+      width: 46px;
+    }
+}
+.plates {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 160px;
+    width: 640px;
+}
+@media (max-width: 640px) {
+.plates {
+    width: 320px;
+}
+
+}
+  .plate {
+    height: 64px;
+    width: 64px;
+  }
+  .burger {
+    filter: url(#gooeyness);
+  }
+  .x {
+    transform: scale(0);
+    transition: transform 400ms;
+  }
+  .line {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+  }
+  .x .line {
+    stroke-width: 5.5px;
+  }
+  .active .line {
+    transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+  }
+  .active .x {
+    transform: scale(1);
+    transition: transform 400ms 350ms;
+  }
+
+  .hamburger .line {
+    transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
+  }
+  .hamburger .line1 {
+    stroke-dasharray: 40 40;
+  }
+  .hamburger .line2 {
+    stroke-dasharray: 21 39;
+  }
+  .hamburger .line3 {
+    stroke-dasharray: 21 39;
+  }
+  .hamburger .line4 {
+    stroke-dasharray: 40 40;
+  }
+  .hamburger .x {
+    transition: transform 400ms 50ms;
+  }
+  
+  .active.hamburger .line {
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+  }
+  .active.hamburger .line1 {
+    stroke-dasharray: 1 40;
+    stroke-dashoffset: -33px;
+  }
+  .active.hamburger .line2 {
+    stroke-dasharray: 5 39;
+    stroke-dashoffset: -37px;
+  }
+  .active.hamburger .line3 {
+    stroke-dasharray: 5 39;
+    stroke-dashoffset: -37px;
+  }
+  .active.hamburger .line4 {
+    stroke-dasharray: 1 40;
+    stroke-dashoffset: -33px;
+  }
+  .active.hamburger .x {
+    transition: transform 400ms 50ms;
+  }
