@@ -12,19 +12,23 @@ const modalDetail = document.querySelector('#modal');
 const modalTrailer = document.querySelector('#modal-trailer');
 const sliderWrapper = document.querySelectorAll('.slider-movies');
 const searchbox = document.querySelector('.search-input');
-const CTAbackHome = document.querySelector('.back-home');
+const backHome = document.querySelector('.back-home');
 const searchResults = document.querySelector('.search-results');
 const mainSection = document.querySelector('main');
+
 
 // event handler search movies
 searchbox.addEventListener('keyup', (event)=> {
     if(event.key == "Enter" || event.keycode == 13){
         searchMovies(searchbox.value)
+        pagging.totalPage = 1
+        pagging.activePage = 1
+        
     }
 })
 
 // event handler back to home
-CTAbackHome.addEventListener('click', (e)=> {
+backHome.addEventListener('click', (e)=> {
     e.preventDefault();
     searchResults.style.display = 'none';
     mainSection.style.display = 'block'

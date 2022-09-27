@@ -243,6 +243,67 @@
     }
 }
 
+// Pagination
+
+.pagination-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        position: relative;
+        background: $primary-light;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        border-radius: 50px;
+        // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        margin: 30px auto;
+    }
+    
+    ul li {
+        list-style: none;
+        line-height: 50px;
+        margin: 0 5px;
+    }
+    
+    ul li.pageNumber {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    ul li a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 50%;
+    }
+    
+    ul li.pageNumber:hover a,
+    ul li.pageNumber a.active {
+        background: $primary;
+        color: #fff;
+    }
+}
+
+
+
+// ul li:first-child {
+//   margin-right: 30px;
+//   font-weight: 700;
+//   font-size: 20px;
+// }
+
+// ul li:last-child {
+//   margin-left: 30px;
+//   font-weight: 700;
+//   font-size: 20px;
+// }
+
 @keyframes fade-tab {
     from {
         opacity: 0;

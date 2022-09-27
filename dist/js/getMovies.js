@@ -21,9 +21,44 @@ function searchMovies(keyword){
     const url = urlRequest('search/multi') + `&query=${keyword}`;
     const onError = error => console.log(error);
     requestMovies(url, renderSearchMovies, onError);
+    pagging.url = url + '&page='
+}
+
+const pagging = {
+    url: "",
+    totalPage : 1,
+    activePage: 1,
+    btnPagination : function() {
+        let btn = ''
+        for(let i = 1; i <= this.totalPage; i++){
+            btn += `<li class="pageNumber"><a class="" data-page="${i}">${i}</a></li>`
+        }
+        return btn
+    }
+}
+
+
+function updatePagination(data){
+    pagging.page = data.page
+    pagging.totalPage = data.total_pages
+    document.querySelector('.pagination').innerHTML = pagging.btnPagination()
+
+    const paginationItems = document.querySelectorAll('.pageNumber a')
+    paginationItems[pagging.activePage - 1].classList.add('active')
+
+    paginationItems.forEach(btn => {
+        btn.addEventListener('click', e => {
+            pagging.activePage = btn.innerHTML.toString();
+
+            e.preventDefault();
+            const onError = error => console.log(error);
+            requestMovies(pagging.url + btn.innerHTML, renderSearchMovies, onError )
+        })
+    })
 }
 
 function renderSearchMovies(data){
+    updatePagination(data)
     const movies = data.results;
     let result = "";
     movies.forEach(movie => result += templateCardMovies(movie))

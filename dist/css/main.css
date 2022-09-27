@@ -770,6 +770,45 @@ header {
   cursor: pointer;
 }
 
+.pagination-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-wrap ul {
+  position: relative;
+  background: #2D2B64;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 30px auto;
+}
+.pagination-wrap ul li {
+  list-style: none;
+  line-height: 50px;
+  margin: 0 5px;
+}
+.pagination-wrap ul li.pageNumber {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.pagination-wrap ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+}
+.pagination-wrap ul li.pageNumber:hover a,
+.pagination-wrap ul li.pageNumber a.active {
+  background: #000039;
+  color: #fff;
+}
+
 @keyframes fade-tab {
   from {
     opacity: 0;
