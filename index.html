@@ -1,1 +1,267 @@
-<meta http-equiv="refresh" content="0; url=https://moviessnack.netlify.app/dist/index.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@6.5.0/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="dist/css/main.css">
+    <title>Movies Snacks Db</title>
+</head>
+<body>
+	<div id="app">
+		<!-- NAVBAR -->
+		<nav>
+			<div class="container">
+				<div class="navbar">
+					<div class="plate hamburger" >
+						<svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">  <path class="line line1" d="M 30,35 H 70 " /> <path class="line line2" d="M 50,50 H 30 L 34,32" /> <path class="line line3" d="M 50,50 H 70 L 66,68" /> <path class="line line4" d="M 30,65 H 70 " /> </svg> <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100"> <path class="line" d="M 34,32 L 66,68" /> <path class="line" d="M 66,32 L 34,68" /> </svg>
+					</div>
+					<div class="nav-brand">
+						<img src="img/nav-logo.png" alt="" class="nav-logo">
+					</div>
+				
+					<div class="nav-links">
+						<a href="">Movies</a>
+						<a href="#">Trending</a>
+						<a href="#">Collection</a>
+						<a href="#">TV Shows</a>
+					</div>
+					<div class="search">
+						<input class="search-input" id="search" name="search" type="text" placeholder="Search Movies...">
+						<div class="search-icon" for="search-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -4 34 34" style="fill:#ffffff;transform:-ms-filter"><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path></svg>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+
+		<!-- END NAVBAR -->
+		<main>
+			<!-- CAROUSEL -->
+			<header>
+				<div class="container">
+
+					<div class="carousel skeleton-loading">
+						
+						<div class="swiper-container gallery-top">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:-ms-filter"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,17v-4H7v-2h5V7l5,5L12,17z"></path></svg>
+							</div>
+							<div class="swiper-button-prev">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:-ms-filter"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M17,13h-5v4l-5-5l5-5v4h5V13z"></path></svg>
+							</div>
+						</div>
+						
+
+					</div>
+				</div>
+			</header>
+			<!-- END CAROUSEL -->
+
+			<!-- TRENDING -->
+			<section class="trending">
+				<div class="container">
+					<h1>Trending now</h1>
+					<div class="swiper-container slider-movies skeleton-loading">
+						<div class="swiper-wrapper">
+							
+							<div class="swiper-slide">
+								<div class="card-movies"></div>								
+							</div>
+							<div class="swiper-slide">
+								<div class="card-movies"></div>								
+							</div>
+							<div class="swiper-slide">
+								<div class="card-movies"></div>								
+							</div>
+							<div class="swiper-slide">
+								<div class="card-movies"></div>								
+							</div>
+							<div class="swiper-slide">
+								<div class="card-movies"></div>								
+							</div>
+
+						</div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:-ms-filter"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,17v-4H7v-2h5V7l5,5L12,17z"></path></svg>
+						</div>
+						<div class="swiper-button-prev">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:-ms-filter"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M17,13h-5v4l-5-5l5-5v4h5V13z"></path></svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END TRENDING -->
+			<!-- 	NEW TRAILER -->
+			<section class="new-trailer">
+				<div class="container">
+					<h1>New Trailer</h1>
+					<div class="swiper-container slider-trailer skeleton-loading">
+						<div class="swiper-wrapper">
+							
+							<div class="swiper-slide" data-target-trailer="#modal-trailer" href="">
+								
+							</div>
+							
+							<div class="swiper-slide" data-target-trailer="#modal-trailer" href="">
+								
+							</div>
+							
+							<div class="swiper-slide" data-target-trailer="#modal-trailer" href="">
+								
+							</div>
+							
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- END NEW TRAILER-->
+			<!-- FAVORITE TV SHOHWS -->
+			<!-- <section class="popular-shows">
+				<div class="container">
+					<h1>Favorite TV Shows</h1>
+					<div class="swiper-container slider-movies">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/poster.png" alt="">
+							</div>
+
+						</div>
+						
+						<div class="swiper-button-next">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:-ms-filter"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M12,17v-4H7v-2h5V7l5,5L12,17z"></path></svg>
+						</div>
+						<div class="swiper-button-prev">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);transform:-ms-filter"><path d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M17,13h-5v4l-5-5l5-5v4h5V13z"></path></svg>
+						</div>
+					</div>
+				</div>
+			</section> -->
+			<!-- END FAVORITE TV SHOWS -->
+		</main>
+
+		<!-- MODAL -->
+		<div class="modal" id="modal">
+			<span class="close" data-close-modal >&times;</span>
+			<div class="modal-content">
+				<div class="modal-body">
+					
+					<div class="container">        
+						<section class="detail-movie skeleton-loading">
+				
+							<div class="poster-detail">
+								<div></div>
+							</div>
+							<div class="detail-info-movie">
+								<h1 class="title"></h1>
+								<p class="box-wide"></p>
+								<div class="tabs-info">
+									<ul>
+										<li></li>
+										<li></li>
+										<li ></li>
+									</ul>
+									<div class="tabs-content">
+										<article id="details" class="active" >
+											
+											<div id="trailer">
+												<div class="trailer-video">
+													
+												</div>
+											</div>
+											<div id="rating">
+												
+											</div>
+											<div id="Overvie">
+												<p class="box-wide"></p>
+												<p class="box-wide"></p>
+												<p class="box-wide"></p>
+											</div>
+											
+										</article>
+									</div>    
+								</div>
+							</div>
+				
+						</section>
+					</div>
+	
+				</div>
+			</div>
+		</div>
+	<!-- END modal detail -->
+
+	<!-- Modal trailer -->
+	<div id="modal-trailer">
+		<div class="trailer-wrapper">
+			<span data-close-modal-trailer>&times;</span>
+			<div class="modal-trailer-video">
+				<iframe src="https://www.youtube.com/embed/" frameborder="0"  title="YouTube video" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<!-- End Modal trailer -->
+
+	<!-- search results -->
+	<section class="search-results">
+		<div class="container">
+			<a href="" class="back-home">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:#fff ;transform:-ms-filter; width:24px; height: 24px; position: static; margin-right: 8px"><path d="M21 11L6.414 11 11.707 5.707 10.293 4.293 2.586 12 10.293 19.707 11.707 18.293 6.414 13 21 13z"></path></svg>
+				<span>Back to homepage</span>
+			</a>			
+			<div class="movie-results-container">
+				
+			</div>
+			
+			<div class="pagination-wrap">
+				<ul class="pagination my-5">
+					<!-- <li><a href="#" class="prev">< Prev</a></li> -->
+					<!-- <li><a href="#" class="next">Next ></a></li> -->
+				</ul>
+
+			</div>
+			
+		</div>
+	</section>
+	</div>
+
+	<script src="https://unpkg.com/swiper@6.5.0/swiper-bundle.min.js"></script>
+	<script src="dist/js/getMovies.js"></script>
+	<script src="dist/js/main.js"></script>
+</body>
+</html>
